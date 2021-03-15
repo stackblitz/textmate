@@ -24,8 +24,8 @@ export interface LanguageDefinition {
 	 */
 	grammar?: string | DefinitionLocation;
 	/**
-	 * The name or location of the language configuration file. If not provided, the `base` will be the `id`
-	 * of the language definition and the file will be `language-configuration.json`.
+	 * The name or location of the language configuration file. If not provided, the `base` will be the
+	 * base of the `grammar` and the file will be `language-configuration.json`.
 	 */
 	configuration?: string | DefinitionLocation;
 	/**

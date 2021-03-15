@@ -40,7 +40,8 @@
 	},
 	"ava": {
 		"files": [
-			"source/test/**/*"
+			"source/test/**/*",
+			"!source/test/helpers/**/*"
 		],
 		"typescript": {
 			"rewritePaths": {

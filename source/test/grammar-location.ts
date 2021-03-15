@@ -1,5 +1,6 @@
 import test from 'ava';
-import { getGrammarLocation } from '..';
+import { languages, grammars, getGrammarLocation } from '..';
+import { fileExistsMacro } from './helpers/file-exists';
 
 test('should throw if grammar property is invalid', (t) => {
 	t.throws(() => getGrammarLocation({ language: 'javascript', extensions: ['.js'], grammar: 1 } as any), {
@@ -104,3 +105,12 @@ test('should return grammar location if definition is a `LanguageDefinition` wit
 		'scss/syntaxes/scss.tmLanguage.json'
 	);
 });
+
+// Iterate over all languages and grammars and test that the grammar file exists
+for (const language of languages) {
+	test(`grammar should exist for language ${language.language}`, fileExistsMacro, getGrammarLocation(language));
+}
+
+for (const grammar of grammars) {
+	test(`grammar should exist for scope ${grammar.scopeName}`, fileExistsMacro, getGrammarLocation(grammar));
+}

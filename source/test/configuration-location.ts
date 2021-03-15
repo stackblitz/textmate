@@ -1,5 +1,6 @@
 import test from 'ava';
-import { getLanguageConfigurationLocation } from '..';
+import { languages, getLanguageConfigurationLocation } from '..';
+import { fileExistsMacro } from './helpers/file-exists';
 
 test('should throw if grammar property is invalid', (t) => {
 	t.throws(
@@ -78,3 +79,12 @@ test('should return location if configuration is a string', (t) => {
 		'jsx-tags/tags-language-configuration.json'
 	);
 });
+
+// Iterate over all languages and test that the configuration file exists
+for (const language of languages) {
+	test(
+		`language configuration should exist for language ${language.language}`,
+		fileExistsMacro,
+		getLanguageConfigurationLocation(language)
+	);
+}
