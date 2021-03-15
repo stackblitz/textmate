@@ -36,13 +36,13 @@ export const getGrammarLocation = (definition: GrammarDefinition | LanguageDefin
 
 	if (isLanguageDefinition(definition) && typeof definition.grammar === 'string') {
 		// The grammar will only be a `string` in case of a language definition.
-		return path.join(definition.language, definition.grammar);
+		return path.join(definition.language, 'syntaxes', definition.grammar);
 	}
 
 	// If the `grammar` is not a `string`, it has to be an object.
 	verifyDefinitionLocation('grammar', definition.grammar);
 
-	return path.join(definition.grammar.base, definition.grammar.file);
+	return path.join(definition.grammar.base, 'syntaxes', definition.grammar.file);
 };
 
 /**

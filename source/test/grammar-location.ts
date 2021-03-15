@@ -74,7 +74,7 @@ test('should return grammar location if definition is a `GrammarDefinition`', (t
 				file: 'jsregexp.tmLanguage'
 			}
 		}),
-		'javascript/jsregexp.tmLanguage'
+		'javascript/syntaxes/jsregexp.tmLanguage'
 	);
 });
 
@@ -89,7 +89,7 @@ test('should return grammar location if definition is a `LanguageDefinition` wit
 				file: 'sass.tmLanguage.json'
 			}
 		}),
-		'scss/sass.tmLanguage.json'
+		'scss/syntaxes/sass.tmLanguage.json'
 	);
 });
 
@@ -101,6 +101,6 @@ test('should return grammar location if definition is a `LanguageDefinition` wit
 			extensions: ['.scss'],
 			grammar: 'scss.tmLanguage.json'
 		}),
-		'scss/scss.tmLanguage.json'
+		'scss/syntaxes/scss.tmLanguage.json'
 	);
 });
