@@ -1,0 +1,65 @@
+{
+	"name": "@blitz/textmate",
+	"version": "0.0.0",
+	"description": "TextMate Grammars for StackBlitz",
+	"license": "MIT",
+	"repository": "stackblitz/textmate",
+	"author": {
+		"name": "Sam Verschueren",
+		"email": "samv@stackblitz.com",
+		"url": "github.com/SamVerschueren"
+	},
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"prepublishOnly": "npm run compile",
+		"test": "npm run prettier:check && xo && npm run compile && ava",
+		"prettier:check": "prettier --check \"grammars/**/*.json\" \"source/**/*.ts\"",
+		"compile": "tsc -p ."
+	},
+	"files": [
+		"grammars",
+		"dist",
+		"!dist/test"
+	],
+	"keywords": [
+		"textmate",
+		"tm",
+		"grammars",
+		"stackblitz",
+		"monaco",
+		"editor"
+	],
+	"devDependencies": {
+		"@ava/typescript": "^1.1.1",
+		"ava": "^3.15.0",
+		"ow": "^0.23.0",
+		"prettier": "^2.2.1",
+		"typescript": "^4.2.3",
+		"xo": "^0.38.2"
+	},
+	"ava": {
+		"files": [
+			"source/test/**/*"
+		],
+		"typescript": {
+			"rewritePaths": {
+				"source/": "dist/"
+			}
+		}
+	},
+	"prettier": {
+		"printWidth": 120,
+		"singleQuote": true,
+		"useTabs": true,
+		"semi": true,
+		"bracketSpacing": true,
+		"trailingComma": "none"
+	},
+	"xo": {
+		"prettier": true,
+		"rules": {
+			"@typescript-eslint/no-var-requires": "off"
+		}
+	}
+}

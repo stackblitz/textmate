@@ -1,0 +1,406 @@
+{
+	"languages": [
+		{
+			"language": "javascript",
+			"scopeName": "source.js",
+			"extensions": [".js", ".es6", ".mjs"],
+			"grammar": "JavaScript.tmLanguage.json",
+			"embeddedLanguages": {
+				"meta.tag": "jsx-tags",
+				"meta.tag.without-attributes": "jsx-tags",
+				"meta.tag.attributes": "javascript",
+				"meta.embedded.expression": "javascript"
+			},
+			"tokenTypes": {
+				"entity.name.type.instance.jsdoc": "other",
+				"entity.name.function.tagged-template": "other",
+				"meta.import string.quoted": "other",
+				"variable.other.jsdoc": "other"
+			}
+		},
+		{
+			"language": "javascriptreact",
+			"scopeName": "source.js.jsx",
+			"extensions": [".jsx"],
+			"grammar": {
+				"base": "javascript",
+				"file": "JavaScriptReact.tmLanguage.json"
+			},
+			"embeddedLanguages": {
+				"meta.tag.js": "jsx-tags",
+				"meta.tag.without-attributes.js": "jsx-tags",
+				"meta.tag.attributes.js": "javascriptreact",
+				"meta.embedded.expression.js": "javascriptreact"
+			},
+			"tokenTypes": {
+				"entity.name.type.instance.jsdoc": "other",
+				"entity.name.function.tagged-template": "other",
+				"meta.import string.quoted": "other",
+				"variable.other.jsdoc": "other"
+			}
+		},
+		{
+			"language": "typescript",
+			"scopeName": "source.ts",
+			"extensions": [".ts"],
+			"grammar": "TypeScript.tmLanguage.json",
+			"tokenTypes": {
+				"entity.name.type.instance.jsdoc": "other",
+				"entity.name.function.tagged-template": "other",
+				"meta.import string.quoted": "other",
+				"variable.other.jsdoc": "other"
+			}
+		},
+		{
+			"language": "typescriptreact",
+			"scopeName": "source.tsx",
+			"extensions": [".tsx"],
+			"grammar": {
+				"base": "typescript",
+				"file": "TypeScriptReact.tmLanguage.json"
+			},
+			"embeddedLanguages": {
+				"meta.tag.tsx": "jsx-tags",
+				"meta.tag.without-attributes.tsx": "jsx-tags",
+				"meta.tag.attributes.tsx": "typescriptreact",
+				"meta.embedded.expression.tsx": "typescriptreact"
+			},
+			"tokenTypes": {
+				"entity.name.type.instance.jsdoc": "other",
+				"entity.name.function.tagged-template": "other",
+				"meta.import string.quoted": "other",
+				"variable.other.jsdoc": "other"
+			}
+		},
+		{
+			"language": "coffeescript",
+			"scopeName": "source.coffee",
+			"extensions": [".coffee"],
+			"grammar": "coffeescript.tmLanguage.json"
+		},
+		{
+			"language": "livescript",
+			"scopeName": "source.livescript",
+			"extensions": [".ls"],
+			"grammar": "livescript.tmLanguage.json"
+		},
+		{
+			"language": "css",
+			"scopeName": "source.css",
+			"extensions": [".css"],
+			"grammar": "css.tmLanguage.json",
+			"tokenTypes": {
+				"meta.function.url string.quoted": "other"
+			}
+		},
+		{
+			"language": "scss",
+			"scopeName": "source.css.scss",
+			"extensions": [".scss"],
+			"grammar": "scss.tmLanguage.json"
+		},
+		{
+			"language": "sass",
+			"scopeName": "source.sass",
+			"extensions": [".sass"],
+			"grammar": {
+				"base": "scss",
+				"file": "sass.tmLanguage.json"
+			}
+		},
+		{
+			"language": "less",
+			"scopeName": "source.css.less",
+			"extensions": [".less"],
+			"grammar": "less.tmLanguage.json"
+		},
+		{
+			"language": "postcss",
+			"scopeName": "source.css.postcss",
+			"extensions": [".pcss", ".postcss"],
+			"grammar": {
+				"base": "css",
+				"file": "postcss.tmLanguage.json"
+			}
+		},
+		{
+			"language": "html",
+			"scopeName": "text.html.derivative",
+			"extensions": [".html", ".htm", ".shtml", ".xhtml", ".mdoc", ".jsp", ".asp", ".aspx", ".jshtm"],
+			"grammar": "html-derivative.tmLanguage.json",
+			"embeddedLanguages": {
+				"text.html": "html",
+				"source.css": "css",
+				"source.js": "javascript",
+				"source.python": "python",
+				"source.smarty": "smarty"
+			},
+			"tokenTypes": {
+				"meta.tag string.quoted": "other"
+			}
+		},
+		{
+			"language": "jade",
+			"scopeName": "text.pug",
+			"extensions": [".jade", ".pug"],
+			"grammar": {
+				"base": "pug",
+				"file": "pug.tmLanguage.json"
+			}
+		},
+		{
+			"language": "slm",
+			"scopeName": "text.slm",
+			"extensions": [".slm"],
+			"grammar": "slm.tmLanguage.json"
+		},
+		{
+			"language": "markdown",
+			"scopeName": "text.html.markdown",
+			"extensions": [".md", ".markdown", ".mdown", ".mkdn", ".mkd", ".mdwn", ".mdtxt", ".mdtext"],
+			"grammar": "markdown.tmLanguage.json",
+			"embeddedLanguages": {
+				"meta.embedded.block.html": "html",
+				"source.js": "javascript",
+				"source.css": "css",
+				"meta.embedded.block.frontmatter": "yaml",
+				"meta.embedded.block.css": "css",
+				"meta.embedded.block.ini": "ini",
+				"meta.embedded.block.java": "java",
+				"meta.embedded.block.lua": "lua",
+				"meta.embedded.block.makefile": "makefile",
+				"meta.embedded.block.perl": "perl",
+				"meta.embedded.block.r": "r",
+				"meta.embedded.block.ruby": "ruby",
+				"meta.embedded.block.php": "php",
+				"meta.embedded.block.sql": "sql",
+				"meta.embedded.block.vs_net": "vs_net",
+				"meta.embedded.block.xml": "xml",
+				"meta.embedded.block.xsl": "xsl",
+				"meta.embedded.block.yaml": "yaml",
+				"meta.embedded.block.dosbatch": "dosbatch",
+				"meta.embedded.block.clojure": "clojure",
+				"meta.embedded.block.coffee": "coffee",
+				"meta.embedded.block.c": "c",
+				"meta.embedded.block.cpp": "cpp",
+				"meta.embedded.block.diff": "diff",
+				"meta.embedded.block.dockerfile": "dockerfile",
+				"meta.embedded.block.go": "go",
+				"meta.embedded.block.groovy": "groovy",
+				"meta.embedded.block.pug": "jade",
+				"meta.embedded.block.javascript": "javascript",
+				"meta.embedded.block.json": "json",
+				"meta.embedded.block.less": "less",
+				"meta.embedded.block.objc": "objc",
+				"meta.embedded.block.scss": "scss",
+				"meta.embedded.block.perl6": "perl6",
+				"meta.embedded.block.powershell": "powershell",
+				"meta.embedded.block.python": "python",
+				"meta.embedded.block.rust": "rust",
+				"meta.embedded.block.scala": "scala",
+				"meta.embedded.block.shellscript": "shellscript",
+				"meta.embedded.block.typescript": "typescript",
+				"meta.embedded.block.typescriptreact": "typescriptreact",
+				"meta.embedded.block.csharp": "csharp",
+				"meta.embedded.block.fsharp": "fsharp"
+			}
+		},
+		{
+			"language": "json",
+			"scopeName": "source.json",
+			"extensions": [
+				".json",
+				".bowerrc",
+				".jscsrc",
+				".webmanifest",
+				".js.map",
+				".css.map",
+				".ts.map",
+				".har",
+				".jslintrc",
+				".jsonld"
+			],
+			"filenames": ["composer.lock", ".watchmanconfig"],
+			"grammar": "JSON.tmLanguage.json"
+		},
+		{
+			"language": "jsonc",
+			"scopeName": "source.json.comments",
+			"extensions": [".jsonc", ".eslintrc", ".eslintrc.json", ".jsfmtrc", ".jshintrc", ".swcrc", ".hintrc", ".babelrc"],
+			"filenames": [".ember-cli"],
+			"grammar": {
+				"base": "json",
+				"file": "JSONC.tmLanguage.json"
+			}
+		},
+		{
+			"language": "vue",
+			"scopeName": "text.html.vue",
+			"extensions": [".vue"],
+			"grammar": "vue.tmLanguage",
+			"embeddedLanguages": {
+				"text.pug.embedded": "jade",
+				"text.slm.embedded": "slm",
+				"source.css.embedded": "css",
+				"source.scss.embedded": "scss",
+				"source.sass.embedded": "sass",
+				"source.less.embedded": "scss",
+				"source.postcss.embedded": "postcss",
+				"source.stylus.embedded": "stylus",
+				"source.ts.embedded": "typescript",
+				"source.js.embedded": "javascript",
+				"source.coffee.embedded": "coffeescript",
+				"source.livescript.embedded": "livescript"
+			}
+		},
+		{
+			"language": "svelte",
+			"scopeName": "source.svelte",
+			"extensions": [".svelte"],
+			"grammar": "svelte.tmLanguage.json",
+			"embeddedLanguages": {
+				"text.html.markdown": "markdown",
+				"text.pug": "jade",
+				"source.css": "css",
+				"source.css.scss": "scss",
+				"source.css.less": "less",
+				"source.css.postcss": "postcss",
+				"source.sass": "sass",
+				"source.stylus": "stylus",
+				"source.js": "javascript",
+				"source.ts": "typescript",
+				"source.coffee": "coffeescript"
+			}
+		},
+		{
+			"language": "stylus",
+			"scopeName": "source.stylus",
+			"extensions": [".stylus"],
+			"grammar": "Stylus.tmLanguage"
+		},
+		{
+			"language": "jsx-tags",
+			"extensions": [],
+			"configuration": {
+				"base": "javascript",
+				"file": "tags-language-configuration.json"
+			}
+		}
+	],
+	"grammars": [
+		{
+			"scopeName": "text.html.basic",
+			"grammar": {
+				"base": "html",
+				"file": "html.tmLanguage.json"
+			},
+			"tokenTypes": {
+				"meta.tag string.quoted": "other"
+			}
+		},
+		{
+			"scopeName": "source.js.regexp",
+			"grammar": {
+				"base": "javascript",
+				"file": "jsregexp.tmLanguage"
+			}
+		},
+		{
+			"scopeName": "documentation.injection.ts",
+			"grammar": {
+				"base": "typescript",
+				"file": "jsdoc.ts.injection.tmLanguage.json"
+			},
+			"injectTo": ["source.ts", "source.tsx"]
+		},
+		{
+			"scopeName": "documentation.injection.js.jsx",
+			"grammar": {
+				"base": "typescript",
+				"file": "jsdoc.js.injection.tmLanguage.json"
+			},
+			"injectTo": ["source.js", "source.js.jsx"]
+		},
+		{
+			"scopeName": "source.sassdoc",
+			"grammar": {
+				"base": "scss",
+				"file": "sassdoc.tmLanguage.json"
+			}
+		},
+		{
+			"scopeName": "source.ignore",
+			"grammar": {
+				"base": "git",
+				"file": "ignore.tmLanguage.json"
+			}
+		},
+		{
+			"scopeName": "source.diff",
+			"grammar": {
+				"base": "git",
+				"file": "diff.tmLanguage.json"
+			}
+		},
+		{
+			"scopeName": "text.git-rebase",
+			"grammar": {
+				"base": "git",
+				"file": "git-rebase.tmLanguage.json"
+			}
+		},
+		{
+			"scopeName": "text.git-commit",
+			"grammar": {
+				"base": "git",
+				"file": "git-commit.tmLanguage.json"
+			}
+		},
+		{
+			"scopeName": "svelte.pug",
+			"grammar": {
+				"base": "svelte",
+				"file": "pug-svelte.json"
+			},
+			"injectTo": ["source.svelte"],
+			"embeddedLanguages": {
+				"source.ts": "typescript",
+				"text.pug": "jade"
+			}
+		},
+		{
+			"scopeName": "svelte.pug.tags",
+			"grammar": {
+				"base": "svelte",
+				"file": "pug-svelte-tags.json"
+			},
+			"injectTo": ["source.svelte"],
+			"embeddedLanguages": {
+				"source.ts": "typescript",
+				"text.pug": "jade"
+			}
+		},
+		{
+			"scopeName": "svelte.pug.dotblock",
+			"grammar": {
+				"base": "svelte",
+				"file": "pug-svelte-dotblock.json"
+			},
+			"injectTo": ["source.svelte"],
+			"embeddedLanguages": {
+				"source.ts": "typescript"
+			}
+		},
+		{
+			"scopeName": "markdown.svelte.codeblock",
+			"grammar": {
+				"base": "svelte",
+				"file": "markdown-svelte.json"
+			},
+			"injectTo": ["text.html.markdown"],
+			"embeddedLanguages": {
+				"meta.embedded.block.svelte": "svelte"
+			}
+		}
+	]
+}
