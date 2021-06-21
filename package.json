@@ -1,6 +1,6 @@
 {
 	"name": "@blitz/textmate",
-	"version": "0.1.3",
+	"version": "0.1.4",
 	"description": "TextMate Grammars for StackBlitz",
 	"license": "MIT",
 	"repository": "stackblitz/textmate",
