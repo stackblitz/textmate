@@ -15,6 +15,10 @@ export interface LanguageDefinition {
 	 */
 	extensions: string[];
 	/**
+	 * Aliases of the language.
+	 */
+	aliases?: string[];
+	/**
 	 * List of files where it should use the language for.
 	 */
 	filenames?: string[];
@@ -38,4 +42,13 @@ export interface LanguageDefinition {
 	 * The token type map for the grammar.
 	 */
 	tokenTypes?: TokenTypeMap;
+	/**
+	 * The first line of the file can be used to infer the language. If it matches this regular expression, the
+	 * language is inferred correctly.
+	 */
+	firstLine?: string;
+	/**
+	 * The mimetypes that could be used to infer the language.
+	 */
+	mimetypes?: string[];
 }
