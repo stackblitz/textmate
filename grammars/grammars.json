@@ -332,6 +332,23 @@
 			}
 		},
 		{
+			"language": "astro",
+			"scopeName": "text.html.astro",
+			"extensions": [".astro"],
+			"aliases": ["Astro"],
+			"grammar": "astro.tmLanguage.json",
+			"embeddedLanguages": {
+				"text.html.astro": "astro",
+				"text.html.markdown.astro": "astro-markdown",
+				"text.html": "html",
+				"source.css": "css",
+				"source.scss": "scss",
+				"source.sass": "sass",
+				"source.tsx": "typescriptreact",
+				"meta.embedded.block.frontmatter": "typescriptreact"
+			}
+		},
+		{
 			"language": "stylus",
 			"scopeName": "source.stylus",
 			"extensions": [".stylus"],
@@ -508,6 +525,53 @@
 			"injectTo": ["text.html.markdown"],
 			"embeddedLanguages": {
 				"meta.embedded.block.svelte": "svelte"
+			}
+		},
+		{
+			"scopeName": "text.html.markdown.astro",
+			"grammar": {
+				"base": "astro",
+				"file": "astro-markdown.tmLanguage.json"
+			},
+			"injectTo": ["text.html.astro"],
+			"embeddedLanguages": {
+				"text.html.astro": "astro",
+				"text.html.markdown.astro": "astro-markdown",
+				"text.html.markdown": "markdown",
+				"source.tsx": "typescriptreact",
+				"source.js": "javascript",
+				"source.css": "css",
+				"meta.embedded.block.css": "css",
+				"meta.embedded.block.astro": "astro",
+				"meta.embedded.block.ini": "ini",
+				"meta.embedded.block.java": "java",
+				"meta.embedded.block.lua": "lua",
+				"meta.embedded.block.makefile": "makefile",
+				"meta.embedded.block.perl": "perl",
+				"meta.embedded.block.r": "r",
+				"meta.embedded.block.ruby": "ruby",
+				"meta.embedded.block.php": "php",
+				"meta.embedded.block.sql": "sql",
+				"meta.embedded.block.vs_net": "vs_net",
+				"meta.embedded.block.xml": "xml",
+				"meta.embedded.block.xsl": "xsl",
+				"meta.embedded.block.yaml": "yaml",
+				"meta.embedded.block.dosbatch": "dosbatch",
+				"meta.embedded.block.clojure": "clojure",
+				"meta.embedded.block.coffee": "coffee",
+				"meta.embedded.block.c": "c",
+				"meta.embedded.block.cpp": "cpp",
+				"meta.embedded.block.diff": "diff",
+				"meta.embedded.block.dockerfile": "dockerfile",
+				"meta.embedded.block.go": "go",
+				"meta.embedded.block.groovy": "groovy",
+				"meta.embedded.block.pug": "jade",
+				"meta.embedded.block.javascript": "javascript",
+				"meta.embedded.block.json": "json",
+				"meta.embedded.block.less": "less",
+				"meta.embedded.block.scss": "scss",
+				"meta.embedded.block.typescript": "typescript",
+				"meta.embedded.block.typescriptreact": "typescriptreact"
 			}
 		}
 	]
