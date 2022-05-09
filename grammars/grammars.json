@@ -3,7 +3,7 @@
 		{
 			"language": "javascript",
 			"scopeName": "source.js",
-			"extensions": [".js", ".es6", ".mjs"],
+			"extensions": [".js", ".es6", ".mjs", ".cjs"],
 			"grammar": "JavaScript.tmLanguage.json",
 			"embeddedLanguages": {
 				"meta.tag": "jsx-tags",
