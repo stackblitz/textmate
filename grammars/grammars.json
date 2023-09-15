@@ -410,6 +410,31 @@
 				"base": "javascript",
 				"file": "tags-language-configuration.json"
 			}
+		},
+		{
+			"language": "python",
+			"scopeName": "source.python",
+			"grammar": "MagicPython.tmLanguage.json",
+			"extensions": [
+				".py",
+				".rpy",
+				".pyw",
+				".cpy",
+				".gyp",
+				".gypi",
+				".pyi",
+				".ipy",
+				".pyt"
+			],
+			"aliases": [
+				"Python",
+				"py"
+			],
+			"filenames": [
+				"SConstruct",
+				"SConscript"
+			],
+			"firstLine": "^#!\\s*/?.*\\bpython[0-9.-]*\\b"
 		}
 	],
 	"grammars": [
@@ -572,6 +597,13 @@
 				"meta.embedded.block.scss": "scss",
 				"meta.embedded.block.typescript": "typescript",
 				"meta.embedded.block.typescriptreact": "typescriptreact"
+			}
+		},
+		{
+			"scopeName": "source.regexp.python",
+			"grammar": {
+				"base": "python",
+				"file": "MagicRegExp.tmLanguage.json"
 			}
 		}
 	]
