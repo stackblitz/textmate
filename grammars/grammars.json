@@ -589,6 +589,61 @@
 				"base": "python",
 				"file": "MagicRegExp.tmLanguage.json"
 			}
+		},
+		{
+			"scopeName": "inline-template.ng",
+			"grammar": {
+				"base": "angular",
+				"file": "inline-template.json"
+			},
+			"injectTo": ["source.ts"],
+			"embeddedLanguages": {
+				"text.html": "html",
+				"source.css": "css",
+				"source.js": "javascript"
+			}
+		},
+		{
+			"scopeName": "inline-styles.ng",
+			"grammar": {
+				"base": "angular",
+				"file": "inline-styles.json"
+			},
+			"injectTo": ["source.ts"],
+			"embeddedLanguages": {
+				"source.css": "css"
+			}
+		},
+		{
+			"scopeName": "template.ng",
+			"grammar": {
+				"base": "angular",
+				"file": "template.json"
+			},
+			"injectTo": ["text.html.derivative", "source.ts"],
+			"embeddedLanguages": {
+				"text.html": "html",
+				"source.css": "css"
+			}
+		},
+		{
+			"scopeName": "template.blocks.ng",
+			"grammar": {
+				"base": "angular",
+				"file": "template-blocks.json"
+			},
+			"injectTo": ["text.html.derivative", "source.ts"],
+			"embeddedLanguages": {
+				"text.html": "html",
+				"source.js": "javascript"
+			}
+		},
+		{
+			"scopeName": "expression.ng",
+			"grammar": {
+				"base": "angular",
+				"file": "expression.json"
+			}
 		}
 	]
 }
