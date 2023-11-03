@@ -436,7 +436,7 @@
 			"scopeName": "source.js.regexp",
 			"grammar": {
 				"base": "javascript",
-				"file": "jsregexp.tmLanguage"
+				"file": "RegularExpressions.tmLanguage.json"
 			}
 		},
 		{
