@@ -294,9 +294,16 @@
 		},
 		{
 			"language": "vue",
-			"scopeName": "text.html.vue",
+			"scopeName": "source.vue",
 			"extensions": [".vue"],
-			"grammar": "vue.tmLanguage",
+			"grammar": {
+				"base": "vue",
+				"file": "vue.tmLanguage.json"
+			},
+			"configuration": {
+				"base": "vue",
+				"file": "language-configuration.json"
+			},
 			"embeddedLanguages": {
 				"text.pug.embedded": "jade",
 				"text.slm.embedded": "slm",
