@@ -620,11 +620,7 @@
 				"base": "angular",
 				"file": "template.json"
 			},
-			"injectTo": ["text.html.derivative", "source.ts"],
-			"embeddedLanguages": {
-				"text.html": "html",
-				"source.css": "css"
-			}
+			"injectTo": ["text.html.derivative"]
 		},
 		{
 			"scopeName": "template.blocks.ng",
@@ -632,11 +628,7 @@
 				"base": "angular",
 				"file": "template-blocks.json"
 			},
-			"injectTo": ["text.html.derivative", "source.ts"],
-			"embeddedLanguages": {
-				"text.html": "html",
-				"source.js": "javascript"
-			}
+			"injectTo": ["text.html.derivative"]
 		},
 		{
 			"scopeName": "expression.ng",

@@ -3,6 +3,9 @@
 	"injectionSelector": "L:text.html -comment",
 	"patterns": [
 		{
+			"include": "template.blocks.ng"
+		},
+		{
 			"include": "#interpolation"
 		},
 		{
