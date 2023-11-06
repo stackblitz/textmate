@@ -1,13 +1,13 @@
 {
 	"name": "@blitz/textmate",
-	"version": "0.4.2",
+	"version": "0.4.3",
 	"description": "TextMate Grammars for StackBlitz",
 	"license": "MIT",
 	"repository": "stackblitz/textmate",
 	"author": {
 		"name": "Sam Verschueren",
 		"email": "samv@stackblitz.com",
-		"url": "github.com/SamVerschueren"
+		"url": "https://github.com/SamVerschueren"
 	},
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
