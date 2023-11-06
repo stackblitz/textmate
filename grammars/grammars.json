@@ -419,6 +419,26 @@
 			"aliases": ["Python", "py"],
 			"filenames": ["SConstruct", "SConscript"],
 			"firstLine": "^#!\\s*/?.*\\bpython[0-9.-]*\\b"
+		},
+		{
+			"language": "marko",
+			"scopeName": "text.marko",
+			"aliases": ["Marko", "marko"],
+			"extensions": [".marko"],
+			"grammar": {
+				"base": "marko",
+				"file": "marko.tmLanguage.json"
+			},
+			"configuration": {
+				"base": "marko",
+				"file": "language-configuration.json"
+			},
+			"embeddedLanguages": {
+				"source.css": "css",
+				"source.less": "less",
+				"source.scss": "scss",
+				"source.ts": "typescript"
+			}
 		}
 	],
 	"grammars": [
