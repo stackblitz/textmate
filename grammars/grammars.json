@@ -351,8 +351,15 @@
 		{
 			"language": "stylus",
 			"scopeName": "source.stylus",
-			"extensions": [".stylus"],
-			"grammar": "Stylus.tmLanguage"
+			"extensions": [".stylus", ".styl"],
+			"configuration": {
+				"base": "stylus",
+				"file": "language-configuration.json"
+			},
+			"grammar": {
+				"base": "stylus",
+				"file": "stylus.tmLanguage.json"
+			}
 		},
 		{
 			"language": "shellscript",
