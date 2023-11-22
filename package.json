@@ -1,6 +1,6 @@
 {
 	"name": "@blitz/textmate",
-	"version": "0.4.3",
+	"version": "0.4.4",
 	"description": "TextMate Grammars for StackBlitz",
 	"license": "MIT",
 	"repository": "stackblitz/textmate",
@@ -33,9 +33,9 @@
 	"devDependencies": {
 		"@ava/typescript": "^1.1.1",
 		"ava": "^3.15.0",
-		"ow": "^0.23.0",
-		"prettier": "^2.2.1",
-		"typescript": "^4.2.3",
+		"ow": "^0.23.1",
+		"prettier": "^2.8.8",
+		"typescript": "^4.9.5",
 		"xo": "^0.38.2"
 	},
 	"ava": {
