@@ -42,7 +42,7 @@
 		{
 			"language": "typescript",
 			"scopeName": "source.ts",
-			"extensions": [".ts"],
+			"extensions": [".ts", ".mts", ".cts"],
 			"grammar": "TypeScript.tmLanguage.json",
 			"tokenTypes": {
 				"entity.name.type.instance.jsdoc": "other",
