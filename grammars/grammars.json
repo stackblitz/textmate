@@ -632,7 +632,7 @@
 			},
 			"injectTo": ["source.ts"],
 			"embeddedLanguages": {
-				"text.html": "html",
+				"text.html.derivative": "html",
 				"source.css": "css",
 				"source.js": "javascript"
 			}
@@ -645,7 +645,7 @@
 			},
 			"injectTo": ["source.ts"],
 			"embeddedLanguages": {
-				"source.css": "css"
+				"source.css.scss": "scss"
 			}
 		},
 		{
@@ -654,7 +654,7 @@
 				"base": "angular",
 				"file": "template.json"
 			},
-			"injectTo": ["text.html.derivative"]
+			"injectTo": ["text.html.derivative", "source.ts"]
 		},
 		{
 			"scopeName": "template.blocks.ng",
@@ -662,7 +662,27 @@
 				"base": "angular",
 				"file": "template-blocks.json"
 			},
-			"injectTo": ["text.html.derivative"]
+			"injectTo": ["text.html.derivative", "source.ts"],
+			"embeddedLanguages": {
+				"control.block.expression.ng": "javascript",
+				"control.block.body.ng": "html"
+			}
+		},
+		{
+			"scopeName": "template.let.ng",
+			"grammar": {
+				"base": "angular",
+				"file": "let-declaration.json"
+			},
+			"injectTo": ["text.html.derivative", "source.ts"]
+		},
+		{
+			"scopeName": "template.tag.ng",
+			"grammar": {
+				"base": "angular",
+				"file": "template-tag.json"
+			},
+			"injectTo": ["text.html.derivative", "source.ts"]
 		},
 		{
 			"scopeName": "expression.ng",
