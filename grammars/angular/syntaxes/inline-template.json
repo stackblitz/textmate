@@ -62,7 +62,7 @@
 					"name": "string"
 				}
 			},
-			"contentName": "text.html",
+			"contentName": "text.html.derivative",
 			"patterns": [
 				{
 					"include": "text.html.derivative"
