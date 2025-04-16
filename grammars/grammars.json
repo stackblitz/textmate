@@ -649,12 +649,30 @@
 			}
 		},
 		{
+			"scopeName": "host-object-literal.ng",
+			"grammar": {
+				"base": "angular",
+				"file": "host-object-literal.json"
+			},
+			"injectTo": ["source.ts"],
+			"embeddedLanguages": {
+				"text.html.derivative": "html",
+				"expression.ng": "javascript",
+				"source.ts": "typescript"
+			}
+		},
+		{
 			"scopeName": "template.ng",
 			"grammar": {
 				"base": "angular",
 				"file": "template.json"
 			},
-			"injectTo": ["text.html.derivative", "source.ts"]
+			"injectTo": ["text.html.derivative", "source.ts"],
+			"embeddedLanguages": {
+				"text.html": "html",
+				"source.css": "css",
+				"expression.ng": "javascript"
+			}
 		},
 		{
 			"scopeName": "template.blocks.ng",
@@ -664,6 +682,7 @@
 			},
 			"injectTo": ["text.html.derivative", "source.ts"],
 			"embeddedLanguages": {
+				"text.html": "html",
 				"control.block.expression.ng": "javascript",
 				"control.block.body.ng": "html"
 			}
