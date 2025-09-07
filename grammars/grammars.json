@@ -873,8 +873,14 @@
 				"file": "language-configuration.json"
 			},
 			"embeddedLanguages": {
-				"source.css": "css",
-				"source.ts": "typescript"
+				"meta.tag.js": "jsx-tags",
+				"meta.tag.without-attributes.js": "jsx-tags",
+				"meta.tag.attributes.js.jsx": "javascriptreact",
+				"meta.embedded.expression.js": "javascriptreact",
+				"source.js.embedded.ripple": "javascript",
+				"source.js.embedded.jsx-children.ripple": "javascript",
+				"source.js.embedded.ripple-isolated": "javascript",
+				"source.css": "css"
 			}
 		}
 	]
