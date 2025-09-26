@@ -3,12 +3,7 @@
 		{
 			"language": "javascript",
 			"scopeName": "source.js",
-			"extensions": [
-				".js",
-				".es6",
-				".mjs",
-				".cjs"
-			],
+			"extensions": [".js", ".es6", ".mjs", ".cjs"],
 			"grammar": "JavaScript.tmLanguage.json",
 			"embeddedLanguages": {
 				"meta.tag": "jsx-tags",
@@ -26,9 +21,7 @@
 		{
 			"language": "javascriptreact",
 			"scopeName": "source.js.jsx",
-			"extensions": [
-				".jsx"
-			],
+			"extensions": [".jsx"],
 			"grammar": {
 				"base": "javascript",
 				"file": "JavaScriptReact.tmLanguage.json"
@@ -49,11 +42,7 @@
 		{
 			"language": "typescript",
 			"scopeName": "source.ts",
-			"extensions": [
-				".ts",
-				".mts",
-				".cts"
-			],
+			"extensions": [".ts", ".mts", ".cts"],
 			"grammar": "TypeScript.tmLanguage.json",
 			"tokenTypes": {
 				"entity.name.type.instance.jsdoc": "other",
@@ -65,9 +54,7 @@
 		{
 			"language": "typescriptreact",
 			"scopeName": "source.tsx",
-			"extensions": [
-				".tsx"
-			],
+			"extensions": [".tsx"],
 			"grammar": {
 				"base": "typescript",
 				"file": "TypeScriptReact.tmLanguage.json"
@@ -88,25 +75,19 @@
 		{
 			"language": "coffeescript",
 			"scopeName": "source.coffee",
-			"extensions": [
-				".coffee"
-			],
+			"extensions": [".coffee"],
 			"grammar": "coffeescript.tmLanguage.json"
 		},
 		{
 			"language": "livescript",
 			"scopeName": "source.livescript",
-			"extensions": [
-				".ls"
-			],
+			"extensions": [".ls"],
 			"grammar": "livescript.tmLanguage.json"
 		},
 		{
 			"language": "css",
 			"scopeName": "source.css",
-			"extensions": [
-				".css"
-			],
+			"extensions": [".css"],
 			"grammar": "css.tmLanguage.json",
 			"tokenTypes": {
 				"meta.function.url string.quoted": "other"
@@ -115,17 +96,13 @@
 		{
 			"language": "scss",
 			"scopeName": "source.css.scss",
-			"extensions": [
-				".scss"
-			],
+			"extensions": [".scss"],
 			"grammar": "scss.tmLanguage.json"
 		},
 		{
 			"language": "sass",
 			"scopeName": "source.sass",
-			"extensions": [
-				".sass"
-			],
+			"extensions": [".sass"],
 			"grammar": {
 				"base": "scss",
 				"file": "sass.tmLanguage.json"
@@ -134,18 +111,13 @@
 		{
 			"language": "less",
 			"scopeName": "source.css.less",
-			"extensions": [
-				".less"
-			],
+			"extensions": [".less"],
 			"grammar": "less.tmLanguage.json"
 		},
 		{
 			"language": "postcss",
 			"scopeName": "source.css.postcss",
-			"extensions": [
-				".pcss",
-				".postcss"
-			],
+			"extensions": [".pcss", ".postcss"],
 			"grammar": {
 				"base": "css",
 				"file": "postcss.tmLanguage.json"
@@ -154,17 +126,7 @@
 		{
 			"language": "html",
 			"scopeName": "text.html.derivative",
-			"extensions": [
-				".html",
-				".htm",
-				".shtml",
-				".xhtml",
-				".mdoc",
-				".jsp",
-				".asp",
-				".aspx",
-				".jshtm"
-			],
+			"extensions": [".html", ".htm", ".shtml", ".xhtml", ".mdoc", ".jsp", ".asp", ".aspx", ".jshtm"],
 			"grammar": "html-derivative.tmLanguage.json",
 			"embeddedLanguages": {
 				"text.html": "html",
@@ -180,10 +142,7 @@
 		{
 			"language": "jade",
 			"scopeName": "text.pug",
-			"extensions": [
-				".jade",
-				".pug"
-			],
+			"extensions": [".jade", ".pug"],
 			"grammar": {
 				"base": "pug",
 				"file": "pug.tmLanguage.json"
@@ -192,24 +151,13 @@
 		{
 			"language": "slm",
 			"scopeName": "text.slm",
-			"extensions": [
-				".slm"
-			],
+			"extensions": [".slm"],
 			"grammar": "slm.tmLanguage.json"
 		},
 		{
 			"language": "markdown",
 			"scopeName": "text.html.markdown",
-			"extensions": [
-				".md",
-				".markdown",
-				".mdown",
-				".mkdn",
-				".mkd",
-				".mdwn",
-				".mdtxt",
-				".mdtext"
-			],
+			"extensions": [".md", ".markdown", ".mdown", ".mkdn", ".mkd", ".mdwn", ".mdtxt", ".mdtext"],
 			"grammar": "markdown.tmLanguage.json",
 			"embeddedLanguages": {
 				"meta.embedded.block.html": "html",
@@ -259,9 +207,7 @@
 		},
 		{
 			"language": "mdx",
-			"extensions": [
-				".mdx"
-			],
+			"extensions": [".mdx"],
 			"scopeName": "text.html.markdown.jsx",
 			"grammar": {
 				"base": "markdown",
@@ -333,28 +279,14 @@
 				".jslintrc",
 				".jsonld"
 			],
-			"filenames": [
-				"composer.lock",
-				".watchmanconfig"
-			],
+			"filenames": ["composer.lock", ".watchmanconfig"],
 			"grammar": "JSON.tmLanguage.json"
 		},
 		{
 			"language": "jsonc",
 			"scopeName": "source.json.comments",
-			"extensions": [
-				".jsonc",
-				".eslintrc",
-				".eslintrc.json",
-				".jsfmtrc",
-				".jshintrc",
-				".swcrc",
-				".hintrc",
-				".babelrc"
-			],
-			"filenames": [
-				".ember-cli"
-			],
+			"extensions": [".jsonc", ".eslintrc", ".eslintrc.json", ".jsfmtrc", ".jshintrc", ".swcrc", ".hintrc", ".babelrc"],
+			"filenames": [".ember-cli"],
 			"grammar": {
 				"base": "json",
 				"file": "JSONC.tmLanguage.json"
@@ -363,9 +295,7 @@
 		{
 			"language": "vue",
 			"scopeName": "source.vue",
-			"extensions": [
-				".vue"
-			],
+			"extensions": [".vue"],
 			"grammar": {
 				"base": "vue",
 				"file": "vue.tmLanguage.json"
@@ -392,9 +322,7 @@
 		{
 			"language": "svelte",
 			"scopeName": "source.svelte",
-			"extensions": [
-				".svelte"
-			],
+			"extensions": [".svelte"],
 			"grammar": "svelte.tmLanguage.json",
 			"embeddedLanguages": {
 				"text.html.markdown": "markdown",
@@ -413,12 +341,8 @@
 		{
 			"language": "astro",
 			"scopeName": "text.html.astro",
-			"extensions": [
-				".astro"
-			],
-			"aliases": [
-				"Astro"
-			],
+			"extensions": [".astro"],
+			"aliases": ["Astro"],
 			"grammar": "astro.tmLanguage.json",
 			"embeddedLanguages": {
 				"text.html.astro": "astro",
@@ -434,10 +358,7 @@
 		{
 			"language": "stylus",
 			"scopeName": "source.stylus",
-			"extensions": [
-				".stylus",
-				".styl"
-			],
+			"extensions": [".stylus", ".styl"],
 			"configuration": {
 				"base": "stylus",
 				"file": "language-configuration.json"
@@ -450,15 +371,7 @@
 		{
 			"language": "shellscript",
 			"scopeName": "source.shell",
-			"aliases": [
-				"Shell Script",
-				"shellscript",
-				"bash",
-				"sh",
-				"zsh",
-				"ksh",
-				"csh"
-			],
+			"aliases": ["Shell Script", "shellscript", "bash", "sh", "zsh", "ksh", "csh"],
 			"extensions": [
 				".sh",
 				".bash",
@@ -502,9 +415,7 @@
 			],
 			"grammar": "shell-unix-bash.tmLanguage.json",
 			"firstLine": "^#!.*\\b(bash|zsh|sh|ksh|dtksh|pdksh|mksh|ash|dash|yash|sh|csh|jcsh|tcsh|itcsh).*|^#\\s*-\\*-[^*]*mode:\\s*shell-script[^*]*-\\*-",
-			"mimetypes": [
-				"text/x-shellscript"
-			]
+			"mimetypes": ["text/x-shellscript"]
 		},
 		{
 			"language": "jsx-tags",
@@ -518,37 +429,16 @@
 			"language": "python",
 			"scopeName": "source.python",
 			"grammar": "MagicPython.tmLanguage.json",
-			"extensions": [
-				".py",
-				".rpy",
-				".pyw",
-				".cpy",
-				".gyp",
-				".gypi",
-				".pyi",
-				".ipy",
-				".pyt"
-			],
-			"aliases": [
-				"Python",
-				"py"
-			],
-			"filenames": [
-				"SConstruct",
-				"SConscript"
-			],
+			"extensions": [".py", ".rpy", ".pyw", ".cpy", ".gyp", ".gypi", ".pyi", ".ipy", ".pyt"],
+			"aliases": ["Python", "py"],
+			"filenames": ["SConstruct", "SConscript"],
 			"firstLine": "^#!\\s*/?.*\\bpython[0-9.-]*\\b"
 		},
 		{
 			"language": "marko",
 			"scopeName": "text.marko",
-			"aliases": [
-				"Marko",
-				"marko"
-			],
-			"extensions": [
-				".marko"
-			],
+			"aliases": ["Marko", "marko"],
+			"extensions": [".marko"],
 			"grammar": {
 				"base": "marko",
 				"file": "marko.tmLanguage.json"
@@ -589,10 +479,7 @@
 				"base": "typescript",
 				"file": "jsdoc.ts.injection.tmLanguage.json"
 			},
-			"injectTo": [
-				"source.ts",
-				"source.tsx"
-			]
+			"injectTo": ["source.ts", "source.tsx"]
 		},
 		{
 			"scopeName": "documentation.injection.js.jsx",
@@ -600,10 +487,7 @@
 				"base": "typescript",
 				"file": "jsdoc.js.injection.tmLanguage.json"
 			},
-			"injectTo": [
-				"source.js",
-				"source.js.jsx"
-			]
+			"injectTo": ["source.js", "source.js.jsx"]
 		},
 		{
 			"scopeName": "source.sassdoc",
@@ -646,9 +530,7 @@
 				"base": "svelte",
 				"file": "pug-svelte.json"
 			},
-			"injectTo": [
-				"source.svelte"
-			],
+			"injectTo": ["source.svelte"],
 			"embeddedLanguages": {
 				"source.ts": "typescript",
 				"text.pug": "jade"
@@ -660,9 +542,7 @@
 				"base": "svelte",
 				"file": "pug-svelte-tags.json"
 			},
-			"injectTo": [
-				"source.svelte"
-			],
+			"injectTo": ["source.svelte"],
 			"embeddedLanguages": {
 				"source.ts": "typescript",
 				"text.pug": "jade"
@@ -674,9 +554,7 @@
 				"base": "svelte",
 				"file": "pug-svelte-dotblock.json"
 			},
-			"injectTo": [
-				"source.svelte"
-			],
+			"injectTo": ["source.svelte"],
 			"embeddedLanguages": {
 				"source.ts": "typescript"
 			}
@@ -687,9 +565,7 @@
 				"base": "svelte",
 				"file": "markdown-svelte.json"
 			},
-			"injectTo": [
-				"text.html.markdown"
-			],
+			"injectTo": ["text.html.markdown"],
 			"embeddedLanguages": {
 				"meta.embedded.block.svelte": "svelte"
 			}
@@ -700,9 +576,7 @@
 				"base": "astro",
 				"file": "astro-markdown.tmLanguage.json"
 			},
-			"injectTo": [
-				"text.html.astro"
-			],
+			"injectTo": ["text.html.astro"],
 			"embeddedLanguages": {
 				"text.html.astro": "astro",
 				"text.html.markdown.astro": "astro-markdown",
@@ -756,9 +630,7 @@
 				"base": "angular",
 				"file": "inline-template.json"
 			},
-			"injectTo": [
-				"source.ts"
-			],
+			"injectTo": ["source.ts"],
 			"embeddedLanguages": {
 				"text.html.derivative": "html",
 				"source.css": "css",
@@ -771,9 +643,7 @@
 				"base": "angular",
 				"file": "inline-styles.json"
 			},
-			"injectTo": [
-				"source.ts"
-			],
+			"injectTo": ["source.ts"],
 			"embeddedLanguages": {
 				"source.css.scss": "scss"
 			}
@@ -784,9 +654,7 @@
 				"base": "angular",
 				"file": "host-object-literal.json"
 			},
-			"injectTo": [
-				"source.ts"
-			],
+			"injectTo": ["source.ts"],
 			"embeddedLanguages": {
 				"text.html.derivative": "html",
 				"expression.ng": "javascript",
@@ -799,10 +667,7 @@
 				"base": "angular",
 				"file": "template.json"
 			},
-			"injectTo": [
-				"text.html.derivative",
-				"source.ts"
-			],
+			"injectTo": ["text.html.derivative", "source.ts"],
 			"embeddedLanguages": {
 				"text.html": "html",
 				"source.css": "css",
@@ -815,10 +680,7 @@
 				"base": "angular",
 				"file": "template-blocks.json"
 			},
-			"injectTo": [
-				"text.html.derivative",
-				"source.ts"
-			],
+			"injectTo": ["text.html.derivative", "source.ts"],
 			"embeddedLanguages": {
 				"text.html": "html",
 				"control.block.expression.ng": "javascript",
@@ -831,10 +693,7 @@
 				"base": "angular",
 				"file": "let-declaration.json"
 			},
-			"injectTo": [
-				"text.html.derivative",
-				"source.ts"
-			]
+			"injectTo": ["text.html.derivative", "source.ts"]
 		},
 		{
 			"scopeName": "template.tag.ng",
@@ -842,10 +701,7 @@
 				"base": "angular",
 				"file": "template-tag.json"
 			},
-			"injectTo": [
-				"text.html.derivative",
-				"source.ts"
-			]
+			"injectTo": ["text.html.derivative", "source.ts"]
 		},
 		{
 			"scopeName": "expression.ng",
