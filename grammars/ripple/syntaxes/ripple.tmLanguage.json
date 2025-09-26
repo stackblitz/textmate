@@ -99,6 +99,9 @@
 					"include": "#var-expr"
 				},
 				{
+					"include": "#server-block"
+				},
+				{
 					"include": "#component-declaration"
 				},
 				{
@@ -314,6 +317,9 @@
 							"name": "variable.other.js"
 						}
 					}
+				},
+				{
+					"include": "#server-member-expression"
 				},
 				{
 					"include": "#jsx-ref-modifier"
@@ -2928,6 +2934,30 @@
 				{
 					"name": "keyword.control.loop.js",
 					"match": "await"
+				},
+				{
+					"name": "meta.for-of-with-index.ripple",
+					"match": "\\(\\s*(let|const|var)\\s+([_$[:alpha:]][_$[:alnum:]]*)\\s+(of)\\s+([^;]+)\\s*;\\s*(index)\\s+([_$[:alpha:]][_$[:alnum:]]*)\\s*\\)",
+					"captures": {
+						"1": {
+							"name": "storage.type.js"
+						},
+						"2": {
+							"name": "variable.other.readwrite.js"
+						},
+						"3": {
+							"name": "keyword.operator.of.js"
+						},
+						"4": {
+							"name": "variable.other.object.js"
+						},
+						"5": {
+							"name": "keyword.keyword.index.ripple"
+						},
+						"6": {
+							"name": "variable.other.readwrite.js"
+						}
+					}
 				},
 				{
 					"begin": "\\(",
@@ -6132,8 +6162,8 @@
 			]
 		},
 		"jsx-tag-without-attributes-in-expression": {
-			"begin": "(?<!\\+\\+|--)(?<=[({\\[,?=>:*]|&&|\\|\\||\\?|\\*\\/|^await|[^\\._$[:alnum:]]await|^return|[^\\._$[:alnum:]]return|^default|[^\\._$[:alnum:]]default|^yield|[^\\._$[:alnum:]]yield|^)\\s*(?=(<)\\s*(?:([_$[:alpha:]][-_$[:alnum:].]*)(?<!\\.|-)(:))?((?![sS][tT][yY][lL][eE]\\b)(?:(?!children)[a-z][a-z0-9]*|(children|@?[_$[:alpha:]][-_$[:alnum:]]*(\\.@?[_$[:alpha:]][-_$[:alnum:]]*)*))(?<!-))?\\s*(>))",
-			"end": "(?!(<)\\s*(?:([_$[:alpha:]][-_$[:alnum:].]*)(?<!\\.|-)(:))?((?![sS][tT][yY][lL][eE]\\b)(?:(?!children)[a-z][a-z0-9]*|(children|@?[_$[:alpha:]][-_$[:alnum:]]*(\\.@?[_$[:alpha:]][-_$[:alnum:]]*)*))(?<!-))?\\s*(>))",
+			"begin": "(?<!\\+\\+|--)(?<=[({\\[,?=>:*]|&&|\\|\\||\\?|\\*\\/|^await|[^\\._$[:alnum:]]await|^return|[^\\._$[:alnum:]]return|^default|[^\\._$[:alnum:]]default|^yield|[^\\._$[:alnum:]]yield|^)\\s*(?=(<)\\s*(?:([_$[:alpha:]][-_$[:alnum:].]*)(?<!\\.|-)(:))?((?![sS][tT][yY][lL][eE]\\b)(?:(?!children)[a-z][a-z0-9]*|(?:children|@?[_$[:alpha:]][-_$[:alnum:]]*(?:\\.@?[_$[:alpha:]][-_$[:alnum:]]*)*))(?<!-))?\\s*(>))",
+			"end": "(?!(<)\\s*(?:([_$[:alpha:]][-_$[:alnum:].]*)(?<!\\.|-)(:))?((?![sS][tT][yY][lL][eE]\\b)(?:(?!children)[a-z][a-z0-9]*|(?:children|@?[_$[:alpha:]][-_$[:alnum:]]*(?:\\.@?[_$[:alpha:]][-_$[:alnum:]]*)*))(?<!-))?\\s*(>))",
 			"patterns": [
 				{
 					"include": "#jsx-tag-without-attributes"
@@ -6142,8 +6172,8 @@
 		},
 		"jsx-tag-without-attributes": {
 			"name": "meta.tag.without-attributes.js",
-			"begin": "(<)\\s*(?:([_$[:alpha:]][-_$[:alnum:].]*)(?<!\\.|-)(:))?((?:(?!children)[a-z][a-z0-9]*|(children|@?[_$[:alpha:]][-_$[:alnum:]]*(\\.@?[_$[:alpha:]][-_$[:alnum:]]*)*))(?<!-))?\\s*(>)",
-			"end": "(</)\\s*(?:([_$[:alpha:]][-_$[:alnum:].]*)(?<!\\.|-)(:))?((?:(?!children)[a-z][a-z0-9]*|(children|@?[_$[:alpha:]][-_$[:alnum:]]*(\\.@?[_$[:alpha:]][-_$[:alnum:]]*)*))(?<!-))?\\s*(>)",
+			"begin": "(<)\\s*(?:([_$[:alpha:]][-_$[:alnum:].]*)(?<!\\.|-)(:))?((?:(?!children)[a-z][a-z0-9]*|(?:children|@?[_$[:alpha:]][-_$[:alnum:]]*(?:\\.@?[_$[:alpha:]][-_$[:alnum:]]*)*))(?<!-))?\\s*(>)",
+			"end": "(</)\\s*(?:([_$[:alpha:]][-_$[:alnum:].]*)(?<!\\.|-)(:))?((?:(?!children)[a-z][a-z0-9]*|(?:children|@?[_$[:alpha:]][-_$[:alnum:]]*(?:\\.@?[_$[:alpha:]][-_$[:alnum:]]*)*))(?<!-))?\\s*(>)",
 			"beginCaptures": {
 				"1": {
 					"name": "punctuation.definition.tag.begin.js"
@@ -6158,9 +6188,6 @@
 					"name": "entity.name.tag.js"
 				},
 				"5": {
-					"name": "support.class.component.js"
-				},
-				"6": {
 					"name": "punctuation.definition.tag.end.js"
 				}
 			},
@@ -6178,9 +6205,6 @@
 					"name": "entity.name.tag.js"
 				},
 				"5": {
-					"name": "support.class.component.js"
-				},
-				"6": {
 					"name": "punctuation.definition.tag.end.js"
 				}
 			},
@@ -6192,8 +6216,8 @@
 			]
 		},
 		"jsx-tag-in-expression": {
-			"begin": "(?x)\n  (?<!\\+\\+|--)(?<=[({\\[,?=>:*]|&&|\\|\\||\\?|\\*\\/|^await|[^\\._$[:alnum:]]await|^return|[^\\._$[:alnum:]]return|^default|[^\\._$[:alnum:]]default|^yield|[^\\._$[:alnum:]]yield|^)\\s*\n  (?!<\\s*[_$[:alpha:]][_$[:alnum:]]*((\\s+extends\\s+[^=>])|,)) # look ahead is not type parameter of arrow\n  (?=(<)\\s*(?:([_$[:alpha:]][-_$[:alnum:].]*)(?<!\\.|-)(:))?((?![sS][tT][yY][lL][eE]\\b)(?:(?!children)[a-z][a-z0-9]*|(children|@?[_$[:alpha:]][-_$[:alnum:]]*(\\.@?[_$[:alpha:]][-_$[:alnum:]]*)*))(?<!-))(?=((<\\s*)|(\\s+))(?!\\?)|\\/?>))",
-			"end": "(?!(<)\\s*(?:([_$[:alpha:]][-_$[:alnum:].]*)(?<!\\.|-)(:))?((?![sS][tT][yY][lL][eE]\\b)(?:(?!children)[a-z][a-z0-9]*|(children|@?[_$[:alpha:]][-_$[:alnum:]]*(\\.@?[_$[:alpha:]][-_$[:alnum:]]*)*))(?<!-))(?=((<\\s*)|(\\s+))(?!\\?)|\\/?>))",
+			"begin": "(?x)\n  (?<!\\+\\+|--)(?<=[({\\[,?=>:*]|&&|\\|\\||\\?|\\*\\/|^await|[^\\._$[:alnum:]]await|^return|[^\\._$[:alnum:]]return|^default|[^\\._$[:alnum:]]default|^yield|[^\\._$[:alnum:]]yield|^)\\s*\n  (?!<\\s*[_$[:alpha:]][_$[:alnum:]]*((\\s+extends\\s+[^=>])|,)) # look ahead is not type parameter of arrow\n  (?=(<)\\s*(?:([_$[:alpha:]][-_$[:alnum:].]*)(?<!\\.|-)(:))?((?![sS][tT][yY][lL][eE]\\b)(?:(?!children)[a-z][a-z0-9]*|(?:children|@?[_$[:alpha:]][-_$[:alnum:]]*(?:\\.@?[_$[:alpha:]][-_$[:alnum:]]*)*))(?<!-))(?=((<\\s*)|(\\s+))(?!\\?)|\\/?>))",
+			"end": "(?!(<)\\s*(?:([_$[:alpha:]][-_$[:alnum:].]*)(?<!\\.|-)(:))?((?![sS][tT][yY][lL][eE]\\b)(?:(?!children)[a-z][a-z0-9]*|(?:children|@?[_$[:alpha:]][-_$[:alnum:]]*(?:\\.@?[_$[:alpha:]][-_$[:alnum:]]*)*))(?<!-))(?=((<\\s*)|(\\s+))(?!\\?)|\\/?>))",
 			"patterns": [
 				{
 					"include": "#jsx-tag"
@@ -6252,8 +6276,8 @@
 		},
 		"jsx-tag": {
 			"name": "meta.tag.js",
-			"begin": "(?=(<)\\s*(?:([_$[:alpha:]][-_$[:alnum:].]*)(?<!\\.|-)(:))?((?:(?!children)[a-z][a-z0-9]*|(children|@?[_$[:alpha:]][-_$[:alnum:]]*(\\.@?[_$[:alpha:]][-_$[:alnum:]]*)*))(?<!-))(?=((<\\s*)|(\\s+))(?!\\?)|\\/?>))",
-			"end": "(/>)|(?:(</)\\s*(?:([_$[:alpha:]][-_$[:alnum:].]*)(?<!\\.|-)(:))?((?:(?!children)[a-z][a-z0-9]*|(children|@?[_$[:alpha:]][-_$[:alnum:]]*(\\.@?[_$[:alpha:]][-_$[:alnum:]]*)*))(?<!-))?\\s*(>))",
+			"begin": "(?=(<)\\s*(?:([_$[:alpha:]][-_$[:alnum:].]*)(?<!\\.|-)(:))?((?:(?!children)[a-z][a-z0-9]*|(?:children|@?[_$[:alpha:]][-_$[:alnum:]]*(?:\\.@?[_$[:alpha:]][-_$[:alnum:]]*)*))(?<!-))(?=((<\\s*)|(\\s+))(?!\\?)|\\/?>))",
+			"end": "(/>)|(?:(</)\\s*(?:([_$[:alpha:]][-_$[:alnum:].]*)(?<!\\.|-)(:))?((?:(?!children)[a-z][a-z0-9]*|(?:children|@?[_$[:alpha:]][-_$[:alnum:]]*(?:\\.@?[_$[:alpha:]][-_$[:alnum:]]*)*))(?<!-))?\\s*(>))",
 			"endCaptures": {
 				"1": {
 					"name": "punctuation.definition.tag.end.js"
@@ -6279,7 +6303,7 @@
 			},
 			"patterns": [
 				{
-					"begin": "(<)\\s*(?:([_$[:alpha:]][-_$[:alnum:].]*)(?<!\\.|-)(:))?((?:(?!children)[a-z][a-z0-9]*|(children|@?[_$[:alpha:]][-_$[:alnum:]]*(\\.@?[_$[:alpha:]][-_$[:alnum:]]*)*))(?<!-))(?=((<\\s*)|(\\s+))(?!\\?)|\\/?>)",
+					"begin": "(<)\\s*(?:([_$[:alpha:]][-_$[:alnum:].]*)(?<!\\.|-)(:))?((?:(?!children)[a-z][a-z0-9]*|(?:children|@?[_$[:alpha:]][-_$[:alnum:]]*(?:\\.@?[_$[:alpha:]][-_$[:alnum:]]*)*))(?<!-))(?=((<\\s*)|(\\s+))(?!\\?)|\\/?>)",
 					"beginCaptures": {
 						"1": {
 							"name": "punctuation.definition.tag.begin.js"
@@ -6421,9 +6445,6 @@
 					"include": "#jsx-tag-attribute-name"
 				},
 				{
-					"include": "#jsx-tag-attribute-prop-accessor-assignment"
-				},
-				{
 					"include": "#jsx-tag-attribute-assignment"
 				},
 				{
@@ -6441,7 +6462,7 @@
 			]
 		},
 		"jsx-tag-attribute-name": {
-			"match": "(?x)\n  \\s*\n  (?:([_$[:alpha:]][-_$[:alnum:].]*)(:))?\n  ([_$[:alpha:]][-_$[:alnum:]]*)\n  (?=\\s|=|:=|/?>|/\\*|//)",
+			"match": "(?x)\n  \\s*\n  (?:([_$[:alpha:]][-_$[:alnum:].]*)(:))?\n  ([_$[:alpha:]][-_$[:alnum:]]*)\n  (?=\\s|=|/?>|/\\*|//)",
 			"captures": {
 				"1": {
 					"name": "entity.other.attribute-name.namespace.js"
@@ -6453,10 +6474,6 @@
 					"name": "entity.other.attribute-name.js"
 				}
 			}
-		},
-		"jsx-tag-attribute-prop-accessor-assignment": {
-			"name": "keyword.keyword.prop-accessor.js",
-			"match": ":=(?=\\s*\\{)"
 		},
 		"jsx-tag-attribute-assignment": {
 			"name": "keyword.operator.assignment.js",
@@ -6501,6 +6518,44 @@
 					"include": "#jsx-entities"
 				}
 			]
+		},
+		"server-block": {
+			"name": "meta.server-block.js",
+			"begin": "(#server)\\s*(\\{)",
+			"beginCaptures": {
+				"1": {
+					"name": "storage.type.server.js"
+				},
+				"2": {
+					"name": "punctuation.definition.block.js"
+				}
+			},
+			"end": "\\}",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.block.js"
+				}
+			},
+			"patterns": [
+				{
+					"include": "#statements"
+				}
+			]
+		},
+		"server-member-expression": {
+			"name": "meta.server-member-expression.js",
+			"match": "(#server)(\\.)([_$[:alpha:]][_$[:alnum:]]*)",
+			"captures": {
+				"1": {
+					"name": "storage.type.server.js"
+				},
+				"2": {
+					"name": "punctuation.accessor.js"
+				},
+				"3": {
+					"name": "entity.name.function.js"
+				}
+			}
 		},
 		"jsx-ref-modifier": {
 			"name": "storage.modifier.js",
