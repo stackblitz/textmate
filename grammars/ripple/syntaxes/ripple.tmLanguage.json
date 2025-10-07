@@ -5,6 +5,7 @@
 		"Once accepted there, we are happy to receive an update request."
 	],
 	"version": "https://github.com/microsoft/TypeScript-TmLanguage/commit/48f608692aa6d6ad7bd65b478187906c798234a8",
+	"fileTypes": ["ripple"],
 	"name": "Ripple",
 	"scopeName": "source.ripple",
 	"patterns": [
